@@ -1,0 +1,25 @@
+#Exemplo de uso
+#0 4 * * * <usuario> who
+#Campo Funcao
+#1o. Minuto
+#2o. Hora
+#3o. Dia do mes
+#4o. Mes
+#5o. Dia da semana
+#6o. Usuario com o qual o comando sera executado
+#7o. Programa para execucao
+#Campo Valores
+#Minuto 0-59
+#Hora 0-23
+#Dia do mes 1-31
+#Mes 1-12
+#Dia da semana 0-6 (o "0" eh o domingo), 1 eh a segunda, etc.
+# -----------------------------------------------------------------------
+#
+# Roda o update do antivirus todos os dias as 23:00
+#
+0 23 * * * /usr/bin/freshclam
+#
+# O script abaixo verifica diariamente o espaco disponivel nos discos e envia email caso o uso esteja em 90% ou mais
+#
+0 6 * * * /root/shell/./monitor-disco.sh
